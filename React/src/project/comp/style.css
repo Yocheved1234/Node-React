@@ -1,0 +1,1079 @@
+/* //////////////////////////////////////////////////////// */
+/* Login.css */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+    /* רקע לבן */
+    color: #333;
+    /* צבע טקסט כהה */
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.login-container:hover {
+    background-color: #f2f2f2;
+    /* שינוי צבע רקע בעת ריחוף */
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* תיבה לבנה עם שקיפות נמוכה */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.98);
+}
+
+.login-form:hover {
+    transform: scale(1.02);
+    /* הגדלת התיבה בעת ריחוף */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* שינוי צללית */
+}
+
+.login-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #77cb46;
+    /* צבע טקסט ירוק בהיר */
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+.login-header::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 50%;
+    height: 2px;
+    background: #8af74b;
+    /* קו קישוט ירוק מתחת לכותרת */
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.login-header:hover::before {
+    width: 100%;
+    /* הרחבת הקו בעת ריחוף */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    position: relative;
+}
+
+.login-form label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #8fbf73;
+    /* קו קישוט ירוק מתחת לתווית */
+    transition: width 0.3s ease;
+}
+
+.login-form label:hover::after {
+    width: 100%;
+    /* הרחבת הקו בעת ריחוף */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #79ba53;
+    /* שינוי צבע גבול בעת ריכוז */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* הוספת צללית בעת ריכוז */
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c532f;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #3c532f;
+    transform: translateY(-3px);
+    /* שינוי מיקום הכפתור בעת ריחוף */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////// */
+/* submit */
+.submit-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit-form__title {
+    color: #3c532f;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.submit-form__fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-form__label {
+    color: #3c532f;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.submit-form__input {
+    padding: 10px;
+    border: 1px solid #3c532f;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.submit-form__error {
+    color: #e57373;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+}
+
+.submit-form__submit-button {
+    padding: 10px 20px;
+    background-color: #3c532f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-form__submit-button:hover {
+    background-color: #3c532f;
+}
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////// */
+/* backing */
+
+
+/* כלליים */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* מיכל */
+.backing-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* טופס */
+.backing-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #e4ab1c6b;
+    text-align: center;
+}
+
+.form-input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #e2e2e2;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #43140d;
+    ;
+    outline: none;
+}
+
+.input-error {
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-button,
+.new-details-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 48%;
+}
+
+.submit-button {
+    background-color: #407225;
+}
+
+.submit-button:hover {
+    background-color: #203f10;
+    transform: scale(1.02);
+}
+
+.new-details-button {
+    background-color: #407225;
+}
+
+.new-details-button:hover {
+    background-color: #3c532f;
+    transform: scale(1.02);
+}
+
+
+
+/* /////////////////////////big//////////// */
+/* כלליים */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* מיכל פרטי הרכב */
+.big-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.big-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* פרטי הרכב */
+.car-details {
+    animation: fadeIn 1s ease-out;
+}
+
+.car-index {
+    font-size: 24px;
+    color: #407225;
+    margin-bottom: 15px;
+    animation: slideIn 1s ease-out;
+}
+
+.car-image {
+    margin: 15px 0;
+    padding: 10px;
+    border: 2px solid #407225;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease-out;
+}
+
+.car-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    animation: zoomIn 1s ease-out;
+}
+
+/* פרטי הרכב */
+.car-info {
+    padding: 10px;
+}
+
+.car-detail {
+    font-size: 16px;
+    color: #5e3408;
+    margin: 8px 0;
+}
+
+/* קבוצת כפתורים */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.back-button {
+    background-color: #5e3408;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background-color: #5e3408;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rent-button {
+    background-color: #5e3408;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rent-button:hover {
+    background-color: #407225;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////NAV */
+/* style.css */
+.nav {
+    position: fixed;
+    /* החזק את ה-Nav במקום קבוע */
+    top: 0;
+    /* מיקום עליון */
+    left: 0;
+    /* מיקום שמאלי */
+    width: 100%;
+    /* רוחב של 100% */
+    background: linear-gradient(135deg, #3f3642, #676d1f);
+    /* גרדיאנט סגול אחיד */
+    padding: 15px 0;
+    /* ריפוד אחיד למעלה ולמטה */
+    display: flex;
+    justify-content: center;
+    /* ממרכז את הקישורים */
+    align-items: center;
+    /* ממרכז את הקישורים אנכית */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* צללית חזקה יותר */
+    z-index: 1000;
+    /* להחזיק מעל לתכנים אחרים */
+    height: 70px;
+    /* גובה אחיד ל-Nav */
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* שינוי צבע וטרנספורמציה */
+}
+
+
+.nav:hover {
+    background: linear-gradient(135deg, #6c7649, #1c111f);
+    /* שינוי צבע גרדיאנט בעת ריחוף */
+    transform: translateY(-4px);
+    /* שינוי מיקום בעת ריחוף */
+}
+
+.link {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* עגל פינות מעוגל */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #f1e5f1;
+    /* צבע טקסט בהיר יותר בעת ריחוף */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* צבע רקע שקוף לבן בעת ריחוף */
+    transform: scale(1.1);
+    /* הגדלת הקישור בעת ריחוף */
+}
+
+.link.active {
+    color: #f1e5f1;
+    /* צבע טקסט עבור הקישור הפעיל */
+    background-color: rgba(255, 255, 255, 0.4);
+    /* צבע רקע שקוף לבן עבור הקישור הפעיל */
+    transform: scale(1.05);
+    /* הגדלת הקישור הפעיל */
+}
+
+
+/* תנאי שימוש */
+
+
+/* עיצוב בסיסי */
+.terms-container {
+    background-color: #fff8e1;
+    /* גוון צהוב עדין */
+    color: #333;
+    /* צבע טקסט כהה לקריאות טובה */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    animation: fadeIn 1s ease-out;
+}
+
+.terms-title {
+    color: #fbc02d;
+    /* גוון צהוב בוהק לכותרת */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.terms-intro {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.terms-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #fbc02d;
+    border-radius: 5px;
+    background-color: #fffde7;
+    animation: slideIn 0.5s ease-out;
+}
+
+
+.section-title {
+    color: #fbc02d;
+    /* גוון צהוב בוהק לכותרת של כל סעיף */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.section-content {
+    font-size: 1em;
+}
+
+.terms-footer {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.price-range,
+.bed-range {
+    margin: 10px 0;
+}
+
+.apartment-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.apartment-card:hover {
+    transform: scale(1.02);
+}
+
+.apartment-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.apartment-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.submit-form__submit-button {
+    background-color: #407225;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-form__submit-button:hover {
+    background-color: #5e3408;
+}
+
+/* ////////////////////////////////////////////////////////// */
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0b0b;
+    /* Light background for a soft look */
+    color: #ddc1c1;
+    /* Dark text for contrast */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    /* Light border */
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    /* Light pastel blue */
+}
+
+h2 {
+    color: #2c3e50;
+    /* Darker color for headings */
+}
+
+.price-range,
+.bed-range {
+    margin: 15px 0;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    width: 60px;
+    margin: 0 10px;
+}
+
+.submit-form__submit-button {
+    background-color: #407225;
+    /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-form__submit-button:hover {
+    background-color: #407225;
+    /* Darker green on hover */
+}
+
+.apartment-card {
+    border: 1px solid #e0e0e0;
+    /* Light border */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #fafafa;
+    /* Light grey background for cards */
+    transition: box-shadow 0.3s;
+}
+
+.apartment-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Shadow on hover */
+}
+
+.apartment-image {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+strong {
+    color: #34495e;
+    /* Darker color for strong text */
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* //////////////////////////////////// */
+/* style.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.filter-section {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filter-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.price-range,
+.bed-range {
+    margin-bottom: 15px;
+}
+
+.price-range input[type="range"] {
+    width: 100%;
+}
+
+.price-range span {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+.bed-range label {
+    margin-right: 10px;
+}
+
+.submit-form__submit-button {
+    background-color: #5e3408;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-form__submit-button:hover {
+    background-color: #5e3408;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #5e3408;
+    padding: 16px;
+    background-color: #ffffff;
+    flex: 1 1 calc(33.33% - 32px);
+    box-sizing: border-box;
+    text-align: right;
+    font-family: Comix No2 CLM;
+    transition: transform 0.2s;
+
+}
+
+#card:hover {
+    transform: scale(1.02);
+
+
+}
+
+
+.apartment-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+#p {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+
+
+
+
+
+/* style.css */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    /* Removes default styling in WebKit browsers */
+    width: 100%;
+    height: 8px;
+    /* Height of the track */
+    background: #ddd;
+    /* Background color of the track */
+    border-radius: 5px;
+    /* Rounded corners for the track */
+    outline: none;
+    /* Removes outline */
+    opacity: 0.7;
+    /* Slightly transparent */
+    transition: opacity 0.2s;
+    /* Transition for hover effect */
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+    /* Fully opaque on hover */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Removes default styling for the thumb */
+    appearance: none;
+    width: 20px;
+    /* Width of the thumb */
+    height: 20px;
+    /* Height of the thumb */
+    border-radius: 50%;
+    /* Circular thumb */
+    background: #803e00;
+    /* Color of the thumb */
+    cursor: pointer;
+    /* Cursor on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow for the thumb */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    /* Width of the thumb */
+    height: 20px;
+    /* Height of the thumb */
+    border-radius: 50%;
+    /* Circular thumb */
+    background: #805700;
+    /* Color of the thumb */
+    cursor: pointer;
+    /* Cursor on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow for the thumb */
+}
+
+button {
+    background-color: #45670f;
+    /* Dark turquoise background color */
+    color: #ffffff;
+    /* Light text color */
+    font-size: 16px;
+    /* Smaller font size */
+    padding: 10px 20px;
+    /* Decreased padding for a smaller button */
+    border: none;
+    /* Remove button border */
+    border-radius: 50px;
+    /* Circular shape for the button */
+    margin: 5px;
+    /* Reduced margin between buttons */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow effect */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #fce0d2;
+    /* Darker blue on hover */
+}
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h2 {
+    color: #4a7c2f;
+    /* Light green */
+    text-align: center;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #d1b49b;
+    /* Light brown */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a7c2f;
+    /* Light green */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b66823;
+    /* Light brown */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #4a7c2f;
+    /* Light green */
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.adin {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #45670f;
+    box-shadow: 0 4px 6px #5e3408;
+    padding: 16px;
+    background-color: #ffffff;
+    flex: 1 1 calc(33.33% - 32px);
+    box-sizing: border-box;
+    text-align: right;
+    font-family: Comix No2 CLM;
+    transition: transform 0.2s;
+
+}
+
+.adin:hover {
+    transition: transform 0.2;
+}
